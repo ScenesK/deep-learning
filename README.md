@@ -40,4 +40,5 @@ $ nvidia-docker build -t scenesk/cuda:8.0 ./base/
 ```
 $ nvidia-docker build -t scenesk/dlstf:0.1 ./tensorflow/
 $ nvidia-docker build -t scenesk/dlskeras:0.1 ./keras/
+$ nvidia-docker build -t scenesk/dlschainer:0.1 ./chainer/
 ```
