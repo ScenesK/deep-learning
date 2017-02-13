@@ -12,7 +12,7 @@ RUN pip3 install --upgrade pip && pip3 install \
     graphviz==0.5.2 \
     numpy==1.12.0
 
-RUN git clone --recursive https://github.com/dmlc/mxnet ~/mxnet \
+RUN git clone --depth=1 -b v0.9.3 --recursive https://github.com/dmlc/mxnet ~/mxnet \
  && cd ~/mxnet \
  && cp make/config.mk . \
  && echo "USE_BLAS=openblas" >> config.mk \
