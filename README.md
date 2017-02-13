@@ -1,4 +1,4 @@
-AWS EC2でg2.2xlargeインスタンス(Ubuntu14.04, 9GB)作成
+AWS EC2でg2.2xlargeインスタンス(Ubuntu14.04, 11GB)作成
 
 nvidiaドライバのインストール
 
@@ -41,4 +41,5 @@ $ nvidia-docker build -t scenesk/cuda:8.0 ./base/
 $ nvidia-docker build -t scenesk/dlstf:0.1 ./tensorflow/
 $ nvidia-docker build -t scenesk/dlskeras:0.1 ./keras/
 $ nvidia-docker build -t scenesk/dlschainer:0.1 ./chainer/
+$ nvidia-docker build -t scenesk/dlsmx:0.1 ./mxnet/
 ```
