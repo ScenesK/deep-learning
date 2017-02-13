@@ -1,7 +1,7 @@
 FROM scenesk/cuda:8.0
 MAINTAINER ScenesK
 
-RUN apt-get install -y \
+RUN apt-get update && apt-get install -y \
     g++ \
     python3-dev \
     python3-pip \
