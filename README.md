@@ -31,6 +31,12 @@ $ sudo dpkg -i /tmp/nvidia-docker*.deb && rm /tmp/nvidia-docker*.deb
 ```
 $ cd ~
 $ git clone https://github.com/scenesk/deep-learning.git
-$ cd deep-learning/base
-$ nvidia-docker build -t scenesk/cuda:8.0
+$ cd deep-learning
+$ nvidia-docker build -t scenesk/cuda:8.0 ./base/
+```
+
+各ライブラリ用の環境構築
+
+```
+$ nvidia-docker build -t scenesk/dlstf:0.1 ./tensorflow/
 ```
