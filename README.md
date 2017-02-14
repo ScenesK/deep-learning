@@ -37,4 +37,5 @@ $ nvidia-docker build -t scenesk/dlskeras:0.1 ./keras/
 $ nvidia-docker build -t scenesk/dlschainer:0.1 ./chainer/
 $ nvidia-docker build -t scenesk/dlsmx:0.1 ./mxnet/
 $ nvidia-docker build -t scenesk/dlscntk:0.1 ./cntk/
+$ nvidia-docker build -t scenesk/dlstorch:0.1 ./torch/
 ```
