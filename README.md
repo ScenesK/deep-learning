@@ -1,4 +1,4 @@
-AWS EC2でg2.2xlargeインスタンス(Ubuntu14.04, 14GB)作成
+AWS EC2でg2.2xlargeインスタンス(Ubuntu14.04, 20GB)作成
 
 nvidiaドライバのインストール
 
@@ -19,25 +19,19 @@ $ exit
 
 再ログイン
 
-nvidia-dockerのインストール[最新版はここを確認](https://github.com/NVIDIA/nvidia-docker/releases)
+nvidia-dockerのインストール([最新版はここを確認](https://github.com/NVIDIA/nvidia-docker/releases))
 
 ```
 $ wget -P /tmp https://github.com/NVIDIA/nvidia-docker/releases/download/v1.0.0/nvidia-docker_1.0.0-1_amd64.deb
 $ sudo dpkg -i /tmp/nvidia-docker*.deb && rm /tmp/nvidia-docker*.deb
 ```
 
-ベースイメージ作成
+各ライブラリ用の環境構築
 
 ```
 $ cd ~
 $ git clone https://github.com/scenesk/deep-learning.git
 $ cd deep-learning
-$ nvidia-docker build -t scenesk/cuda:8.0 ./base/
-```
-
-各ライブラリ用の環境構築
-
-```
 $ nvidia-docker build -t scenesk/dlstf:0.1 ./tensorflow/
 $ nvidia-docker build -t scenesk/dlskeras:0.1 ./keras/
 $ nvidia-docker build -t scenesk/dlschainer:0.1 ./chainer/
